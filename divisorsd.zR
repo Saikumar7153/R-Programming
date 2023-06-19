@@ -1,0 +1,15 @@
+divisors <- function(n){
+  div <- c()
+  for(i in 2:(n-1)){
+    if(n %% i == 0){
+      div <- c(div, i)
+    }
+  }
+  if(length(div) == 0){
+    print(paste0(n, " is a prime number."))
+  } else {
+    print(paste0(n, " has ", length(div), " divisors:"))
+    print(div)
+  }
+}
+divisors(12)
